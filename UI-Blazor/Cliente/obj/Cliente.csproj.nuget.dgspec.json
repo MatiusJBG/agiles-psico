@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Matius\\Desktop\\Universidad\\METO-AGILES\\agiles-psico\\UI-Blazor\\Cliente\\Cliente.csproj": {}
+    "c:\\Users\\Matius\\Desktop\\Universidad\\METO-AGILES\\agiles-psico\\UI-Blazor\\Cliente\\Cliente.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Matius\\Desktop\\Universidad\\METO-AGILES\\agiles-psico\\UI-Blazor\\Cliente\\Cliente.csproj": {
+    "c:\\Users\\Matius\\Desktop\\Universidad\\METO-AGILES\\agiles-psico\\UI-Blazor\\Cliente\\Cliente.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Matius\\Desktop\\Universidad\\METO-AGILES\\agiles-psico\\UI-Blazor\\Cliente\\Cliente.csproj",
+        "projectUniqueName": "c:\\Users\\Matius\\Desktop\\Universidad\\METO-AGILES\\agiles-psico\\UI-Blazor\\Cliente\\Cliente.csproj",
         "projectName": "Cliente",
-        "projectPath": "C:\\Users\\Matius\\Desktop\\Universidad\\METO-AGILES\\agiles-psico\\UI-Blazor\\Cliente\\Cliente.csproj",
+        "projectPath": "c:\\Users\\Matius\\Desktop\\Universidad\\METO-AGILES\\agiles-psico\\UI-Blazor\\Cliente\\Cliente.csproj",
         "packagesPath": "C:\\Users\\Matius\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Matius\\Desktop\\Universidad\\METO-AGILES\\agiles-psico\\UI-Blazor\\Cliente\\obj\\",
+        "outputPath": "c:\\Users\\Matius\\Desktop\\Universidad\\METO-AGILES\\agiles-psico\\UI-Blazor\\Cliente\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Matius\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -44,6 +44,10 @@
         "net9.0": {
           "targetAlias": "net9.0",
           "dependencies": {
+            "Microsoft.AspNetCore.Components.Authorization": {
+              "target": "Package",
+              "version": "[9.0.10, )"
+            },
             "Microsoft.AspNetCore.Components.WebAssembly": {
               "target": "Package",
               "version": "[9.0.10, )"
@@ -64,6 +68,10 @@
               "target": "Package",
               "version": "[9.0.10, )",
               "autoReferenced": true
+            },
+            "System.IdentityModel.Tokens.Jwt": {
+              "target": "Package",
+              "version": "[8.14.0, )"
             }
           },
           "imports": [
