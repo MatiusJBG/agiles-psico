@@ -1,8 +1,12 @@
 {
   "version": 2,
+<<<<<<< HEAD
   "dgSpecHash": "Dry6adhSL4E=",
+=======
+  "dgSpecHash": "rpghsK8ltQA=",
+>>>>>>> 0d85406437969e79c74cfd4a1746aa48c7f8ed01
   "success": true,
-  "projectFilePath": "C:\\Users\\Matius\\Desktop\\Universidad\\METO-AGILES\\agiles-psico\\UI-Blazor\\Cliente\\Cliente.csproj",
+  "projectFilePath": "c:\\Users\\Matius\\Desktop\\Universidad\\METO-AGILES\\agiles-psico\\UI-Blazor\\Cliente\\Cliente.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Matius\\.nuget\\packages\\microsoft.aspnetcore.authorization\\9.0.10\\microsoft.aspnetcore.authorization.9.0.10.nupkg.sha512",
     "C:\\Users\\Matius\\.nuget\\packages\\microsoft.aspnetcore.components\\9.0.10\\microsoft.aspnetcore.components.9.0.10.nupkg.sha512",
