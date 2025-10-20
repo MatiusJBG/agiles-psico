@@ -4,6 +4,7 @@ using Microsoft.AspNetCore.Components.Authorization;
 using Cliente;
 using Cliente.Services;
 using Cliente.Auth;
+using Microsoft.AspNetCore.Components;
 
 var builder = WebAssemblyHostBuilder.CreateDefault(args);
 builder.RootComponents.Add<App>("#app");
@@ -17,5 +18,6 @@ builder.Services.AddAuthorizationCore();
 builder.Services.AddScoped<AuthenticationStateProvider, CustomAuthenticationStateProvider>();
 builder.Services.AddScoped<AuthService>();
 builder.Services.AddScoped(sp => new HttpClient { BaseAddress = new Uri("http://localhost:5108") });
+builder.Services.AddScoped<HotelService>();
 
 await builder.Build().RunAsync();

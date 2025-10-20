@@ -160,6 +160,129 @@ main[b-i3e7c00b33] {
         overflow-y: auto;
     }
 }
+/* /Pages/HotelDetail.razor.rz.scp.css */
+.hotel-detail-container[b-ux0a5cs4f2] {
+    padding: 2rem;
+    background-color: #f8f9fa;
+}
+
+.hotel-detail-card[b-ux0a5cs4f2] {
+    background: #fff;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+.hotel-detail-header[b-ux0a5cs4f2] {
+    padding: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: linear-gradient(45deg, #FE6B8B 30%, #FF8E53 90%);
+    color: white;
+}
+
+.hotel-detail-header h1[b-ux0a5cs4f2] {
+    margin: 0;
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+.back-button[b-ux0a5cs4f2] {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 1.5rem;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+.back-button:hover[b-ux0a5cs4f2] {
+    transform: scale(1.2);
+}
+
+.rating[b-ux0a5cs4f2] {
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+.rating .fa-star[b-ux0a5cs4f2] {
+    color: #ffc107;
+}
+
+.carousel-item img[b-ux0a5cs4f2] {
+    height: 500px;
+    object-fit: cover;
+}
+
+.hotel-detail-body[b-ux0a5cs4f2] {
+    padding: 2rem;
+}
+
+.detail-section[b-ux0a5cs4f2] {
+    margin-bottom: 2rem;
+}
+
+.detail-section h2[b-ux0a5cs4f2] {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 1rem;
+    border-bottom: 2px solid #FE6B8B;
+    padding-bottom: 0.5rem;
+}
+
+.detail-section h2 i[b-ux0a5cs4f2] {
+    margin-right: 0.5rem;
+    color: #FE6B8B;
+}
+
+.comments-list .comment[b-ux0a5cs4f2] {
+    background: #f1f1f1;
+    border-radius: 8px;
+    padding: 1rem;
+    margin-bottom: 0.5rem;
+    display: flex;
+    align-items: center;
+}
+
+.comment i[b-ux0a5cs4f2] {
+    font-size: 1.5rem;
+    color: #ccc;
+    margin-right: 1rem;
+}
+
+.contact-links[b-ux0a5cs4f2] {
+    display: flex;
+    gap: 1rem;
+}
+
+.contact-link[b-ux0a5cs4f2] {
+    display: inline-flex;
+    align-items: center;
+    padding: 10px 20px;
+    border-radius: 50px;
+    text-decoration: none;
+    color: white;
+    font-weight: 600;
+    transition: transform 0.2s ease;
+}
+
+.contact-link:hover[b-ux0a5cs4f2] {
+    transform: scale(1.05);
+}
+
+.contact-link.website[b-ux0a5cs4f2] {
+    background: #007bff;
+}
+
+.contact-link.social-media[b-ux0a5cs4f2] {
+    background: #1877f2;
+}
+
+.contact-link i[b-ux0a5cs4f2] {
+    margin-right: 0.5rem;
+}
 /* /Pages/Hotels.razor.rz.scp.css */
 .hotel-card[b-5fxv8tlhox] {
     transition: transform 0.3s ease, box-shadow 0.3s ease;
