@@ -6,10 +6,108 @@
 <PageTitle>Hoteles</PageTitle>
 
 <div class="container mt-4">
-    <h1>Hoteles Disponibles</h1>
+    <h1 class="page-title">Hoteles Disponibles en Ambato</h1>
+    <p class="page-subtitle">Aquí tienes una lista de algunos de los mejores hoteles en Ambato, Tungurahua, Ecuador.</p>
+    
     <div class="row mt-4">
-        <div class="col-12">
-            <p>Esta sección mostrará la lista de hoteles disponibles próximamente.</p>
-        </div>
+        @foreach (var hotel in hoteles)
+        {
+            <div class="col-md-6 col-lg-4 mb-4">
+                <div class="card h-100 hotel-card">
+                    <div class="card-body d-flex flex-column">
+                        <h5 class="card-title">@hotel.Name</h5>
+                        <h6 class="card-subtitle mb-2 text-muted">
+                            <i class="fas fa-star star-icon"></i> @hotel.Rating
+                        </h6>
+                        <p class="card-text">@hotel.Description</p>
+                        <button class="btn btn-primary mt-auto reservation-button" @onclick="() => OpenReservationModal(hotel)">
+                            <span>Reservar</span>
+                            <i class="fas fa-arrow-right"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        }
     </div>
 </div>
+
+@if (showReservationModal)
+{
+    <div class="modal-backdrop show"></div>
+    <div class="modal show" tabindex="-1" style="display: block;">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Reservar en @selectedHotel!.Name</h5>
+                    <button type="button" class="btn-close" @onclick="CloseReservationModal"></button>
+                </div>
+                <div class="modal-body">
+                    <p><strong>Hotel:</strong> @selectedHotel!.Name</p>
+                    <p><strong>Calificación:</strong> @selectedHotel!.Rating</p>
+                    <div class="form-group">
+                        <label for="checkin-date">Fecha de Check-in:</label>
+                        <input type="date" id="checkin-date" class="form-control" />
+                    </div>
+                    <div class="form-group mt-3">
+                        <label for="checkout-date">Fecha de Check-out:</label>
+                        <input type="date" id="checkout-date" class="form-control" />
+                    </div>
+                    <div class="form-group mt-3">
+                        <label for="num-guests">Número de Huéspedes:</label>
+                        <input type="number" id="num-guests" class="form-control" min="1" value="1" />
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" @onclick="CloseReservationModal">Cancelar</button>
+                    <button type="button" class="btn btn-primary reservation-button" @onclick="ConfirmReservation">
+                        <span>Confirmar Reserva</span>
+                        <i class="fas fa-check"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+}
+
+@code {
+    private class Hotel
+    {
+        public string Name { get; set; } = "";
+        public string Rating { get; set; } = "";
+        public string Description { get; set; } = "";
+    }
+
+    private List<Hotel> hoteles = new List<Hotel>
+    {
+        new Hotel { Name = "Hotel Ambato", Rating = "8.6 (Excelente)", Description = "Ubicado en el centro de la ciudad, ofrece una excelente ubicación y comodidad." },
+        new Hotel { Name = "Roka Plaza Hotel Boutique", Rating = "8.8 (Excelente)", Description = "Una casa colonial modificada que ofrece una experiencia única y lujosa." },
+        new Hotel { Name = "Hotel Seny", Rating = "8.8 (Excelente)", Description = "Conocido por su excelente servicio y cómodas instalaciones." },
+        new Hotel { Name = "Hotel Miraflores", Rating = "8.1 (Muy Bueno)", Description = "Ofrece un ambiente agradable y buenas comodidades para los huéspedes." },
+        new Hotel { Name = "Hotel Versailles", Rating = "8.4 (Muy Bueno)", Description = "Un hotel con encanto y un servicio de alta calidad." },
+        new Hotel { Name = "Hotel Golosone", Rating = "9.0 (Maravilloso)", Description = "Destaca por su excepcional servicio y ambiente acogedor." },
+        new Hotel { Name = "Hotel Florida", Rating = "8.6 (Excelente)", Description = "Con vistas a la ciudad y un hermoso jardín para los huéspedes." },
+        new Hotel { Name = "Hotel de las Américas - Ambato", Rating = "8.6 (Excelente)", Description = "Ofrece un restaurante y terraza para una estancia placentera." },
+        new Hotel { Name = "Hotel Suites La Fontana", Rating = "9.2 (Maravilloso)", Description = "Popular entre los huéspedes por su excelente servicio y suites." },
+        new Hotel { Name = "Hotel Emperador", Rating = "8.1 (Muy Bueno)", Description = "Cuenta con piscina cubierta y spa para una estancia de relax." }
+    };
+
+    private Hotel? selectedHotel;
+    private bool showReservationModal = false;
+
+    private void OpenReservationModal(Hotel hotel)
+    {
+        selectedHotel = hotel;
+        showReservationModal = true;
+    }
+
+    private void CloseReservationModal()
+    {
+        showReservationModal = false;
+    }
+
+    private void ConfirmReservation()
+    {
+        // Lógica para confirmar la reservación
+        CloseReservationModal();
+    }
+}
