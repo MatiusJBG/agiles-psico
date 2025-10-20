@@ -1,20 +1,83 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Matius\\Desktop\\Universidad\\METO-AGILES\\agiles-psico\\UI-Blazor\\Cliente\\Cliente.csproj": {}
+    "C:\\Users\\Windows 11\\Documents\\GitHub\\agiles-psico\\UI-Blazor\\Cliente\\Cliente.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Matius\\Desktop\\Universidad\\METO-AGILES\\agiles-psico\\UI-Blazor\\Cliente\\Cliente.csproj": {
+    "C:\\Users\\Windows 11\\Documents\\GitHub\\agiles-psico\\Application\\Application.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Matius\\Desktop\\Universidad\\METO-AGILES\\agiles-psico\\UI-Blazor\\Cliente\\Cliente.csproj",
-        "projectName": "Cliente",
-        "projectPath": "C:\\Users\\Matius\\Desktop\\Universidad\\METO-AGILES\\agiles-psico\\UI-Blazor\\Cliente\\Cliente.csproj",
-        "packagesPath": "C:\\Users\\Matius\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Matius\\Desktop\\Universidad\\METO-AGILES\\agiles-psico\\UI-Blazor\\Cliente\\obj\\",
+        "projectUniqueName": "C:\\Users\\Windows 11\\Documents\\GitHub\\agiles-psico\\Application\\Application.csproj",
+        "projectName": "Application",
+        "projectPath": "C:\\Users\\Windows 11\\Documents\\GitHub\\agiles-psico\\Application\\Application.csproj",
+        "packagesPath": "C:\\Users\\Windows 11\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Windows 11\\Documents\\GitHub\\agiles-psico\\Application\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Matius\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\Windows 11\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net9.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net9.0": {
+            "targetAlias": "net9.0",
+            "projectReferences": {
+              "c:\\Users\\Windows 11\\Documents\\GitHub\\agiles-psico\\Core\\Core.csproj": {
+                "projectPath": "c:\\Users\\Windows 11\\Documents\\GitHub\\agiles-psico\\Core\\Core.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        },
+        "SdkAnalysisLevel": "9.0.300"
+      },
+      "frameworks": {
+        "net9.0": {
+          "targetAlias": "net9.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.306/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "c:\\Users\\Windows 11\\Documents\\GitHub\\agiles-psico\\Core\\Core.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "c:\\Users\\Windows 11\\Documents\\GitHub\\agiles-psico\\Core\\Core.csproj",
+        "projectName": "Core",
+        "projectPath": "c:\\Users\\Windows 11\\Documents\\GitHub\\agiles-psico\\Core\\Core.csproj",
+        "packagesPath": "C:\\Users\\Windows 11\\.nuget\\packages\\",
+        "outputPath": "c:\\Users\\Windows 11\\Documents\\GitHub\\agiles-psico\\Core\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\Windows 11\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net9.0"
@@ -26,6 +89,151 @@
           "net9.0": {
             "targetAlias": "net9.0",
             "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        },
+        "SdkAnalysisLevel": "9.0.300"
+      },
+      "frameworks": {
+        "net9.0": {
+          "targetAlias": "net9.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.306/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "c:\\Users\\Windows 11\\Documents\\GitHub\\agiles-psico\\Infrastructure\\Infrastructure.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "c:\\Users\\Windows 11\\Documents\\GitHub\\agiles-psico\\Infrastructure\\Infrastructure.csproj",
+        "projectName": "Infrastructure",
+        "projectPath": "c:\\Users\\Windows 11\\Documents\\GitHub\\agiles-psico\\Infrastructure\\Infrastructure.csproj",
+        "packagesPath": "C:\\Users\\Windows 11\\.nuget\\packages\\",
+        "outputPath": "c:\\Users\\Windows 11\\Documents\\GitHub\\agiles-psico\\Infrastructure\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\Windows 11\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net9.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net9.0": {
+            "targetAlias": "net9.0",
+            "projectReferences": {
+              "C:\\Users\\Windows 11\\Documents\\GitHub\\agiles-psico\\Application\\Application.csproj": {
+                "projectPath": "C:\\Users\\Windows 11\\Documents\\GitHub\\agiles-psico\\Application\\Application.csproj"
+              },
+              "c:\\Users\\Windows 11\\Documents\\GitHub\\agiles-psico\\Core\\Core.csproj": {
+                "projectPath": "c:\\Users\\Windows 11\\Documents\\GitHub\\agiles-psico\\Core\\Core.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        },
+        "SdkAnalysisLevel": "9.0.300"
+      },
+      "frameworks": {
+        "net9.0": {
+          "targetAlias": "net9.0",
+          "dependencies": {
+            "Microsoft.Extensions.Configuration.Abstractions": {
+              "target": "Package",
+              "version": "[9.0.10, )"
+            },
+            "System.IdentityModel.Tokens.Jwt": {
+              "target": "Package",
+              "version": "[8.14.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.306/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\Windows 11\\Documents\\GitHub\\agiles-psico\\UI-Blazor\\Cliente\\Cliente.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\Windows 11\\Documents\\GitHub\\agiles-psico\\UI-Blazor\\Cliente\\Cliente.csproj",
+        "projectName": "Cliente",
+        "projectPath": "C:\\Users\\Windows 11\\Documents\\GitHub\\agiles-psico\\UI-Blazor\\Cliente\\Cliente.csproj",
+        "packagesPath": "C:\\Users\\Windows 11\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Windows 11\\Documents\\GitHub\\agiles-psico\\UI-Blazor\\Cliente\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\Windows 11\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net9.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net9.0": {
+            "targetAlias": "net9.0",
+            "projectReferences": {
+              "C:\\Users\\Windows 11\\Documents\\GitHub\\agiles-psico\\Application\\Application.csproj": {
+                "projectPath": "C:\\Users\\Windows 11\\Documents\\GitHub\\agiles-psico\\Application\\Application.csproj"
+              },
+              "c:\\Users\\Windows 11\\Documents\\GitHub\\agiles-psico\\Core\\Core.csproj": {
+                "projectPath": "c:\\Users\\Windows 11\\Documents\\GitHub\\agiles-psico\\Core\\Core.csproj"
+              },
+              "c:\\Users\\Windows 11\\Documents\\GitHub\\agiles-psico\\Infrastructure\\Infrastructure.csproj": {
+                "projectPath": "c:\\Users\\Windows 11\\Documents\\GitHub\\agiles-psico\\Infrastructure\\Infrastructure.csproj"
+              }
+            }
           }
         },
         "warningProperties": {

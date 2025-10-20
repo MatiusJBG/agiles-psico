@@ -1,7 +1,7 @@
 {
   "mainAssemblyName": "Cliente",
   "resources": {
-    "hash": "sha256-sKDYGgv4bzckU9+t33kJ6iCApSeiaYMPMp1J4BjBE8s=",
+    "hash": "sha256-e58bkaB1/7UV+CTW7MRBel2nov4jipMi2hVA0Rb7sKE=",
     "fingerprinting": {
       "Microsoft.AspNetCore.Authorization.50odlujk1g.wasm": "Microsoft.AspNetCore.Authorization.wasm",
       "Microsoft.AspNetCore.Components.nxuc56wpt2.wasm": "Microsoft.AspNetCore.Components.wasm",
@@ -207,8 +207,14 @@
       "icudt_CJK.tjcz0u77k5.dat": "icudt_CJK.dat",
       "icudt_EFIGS.tptq2av103.dat": "icudt_EFIGS.dat",
       "icudt_no_CJK.lfu7j35m59.dat": "icudt_no_CJK.dat",
-      "Cliente.1c5a4otzyi.wasm": "Cliente.wasm",
-      "Cliente.si1nbeip8b.pdb": "Cliente.pdb"
+      "Application.bsi1f73nru.wasm": "Application.wasm",
+      "Core.lrm1rh0r8e.wasm": "Core.wasm",
+      "Infrastructure.txi4bj4cqj.wasm": "Infrastructure.wasm",
+      "Application.33014adfz7.pdb": "Application.pdb",
+      "Core.f5ia08unxd.pdb": "Core.pdb",
+      "Infrastructure.mjtg4i5llk.pdb": "Infrastructure.pdb",
+      "Cliente.mskmbku8qh.wasm": "Cliente.wasm",
+      "Cliente.ubxpb8ck4g.pdb": "Cliente.pdb"
     },
     "jsModuleNative": {
       "dotnet.native.l4ptthxatg.js": "sha256-ddUN4+taa/Qv7Mr8mLpunJO+0Xw3ViOqBvedhe57/hA="
@@ -424,10 +430,16 @@
       "WindowsBase.ahs9krftg4.wasm": "sha256-bgi2FHdT0ABsUP1yKQQ2AP8qfo1V/bS/4cJFE4OUHX8=",
       "mscorlib.k5iaovx9v7.wasm": "sha256-mEFLDERlY1HMNQHzh68xOPawXvI48O1fHW9PbfXugb4=",
       "netstandard.6sr1qvn64m.wasm": "sha256-Gpf+qEqCYaCB6zqI5sNPIurnfpwRtfcWksgf3CW6mHE=",
-      "Cliente.1c5a4otzyi.wasm": "sha256-ga2+0RS8fTBK/BykJeh1OAMawLJzwNeIH/NuA4q6td8="
+      "Application.bsi1f73nru.wasm": "sha256-W/Bjb52YWAoFoWSpXPIaRhNZxSFDxwZdV4fu/Rzjufw=",
+      "Core.lrm1rh0r8e.wasm": "sha256-gchqm52HTzIPz5FaBGArN3UN+zppdWjNlkkteA3ekT8=",
+      "Infrastructure.txi4bj4cqj.wasm": "sha256-4Y9Ui3ElmzthffPjHWCBNikCZVauYOVzmIAam+xbwN4=",
+      "Cliente.mskmbku8qh.wasm": "sha256-xq0C2dAnG8l2L3kQU9fnwWGybds4b6I5XQgP8DVIqqk="
     },
     "pdb": {
-      "Cliente.si1nbeip8b.pdb": "sha256-dKomjOJYm2Yf7u8gbV6TNgGfaijPOgw1RClkeHtzwEo="
+      "Application.33014adfz7.pdb": "sha256-rzLqXXShTcoIIH5IqdscnaEqQdExPwFDeyr/d4pDr3E=",
+      "Core.f5ia08unxd.pdb": "sha256-ncWiiCrDuKfAsngciVM6SufImGBe0uSYzsVB4KU3EuU=",
+      "Infrastructure.mjtg4i5llk.pdb": "sha256-kpXdTlsG5XEzW7Lh2gT4IOrcsEiEyKs7ffyZjv1CPP4=",
+      "Cliente.ubxpb8ck4g.pdb": "sha256-+j/nIJ+n2Vle4DCBG9KBOygocZPiFRqjPPLbf3HeLbc="
     }
   },
   "cacheBootResources": true,
