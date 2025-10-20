@@ -26,8 +26,8 @@
           "net9.0": {
             "targetAlias": "net9.0",
             "projectReferences": {
-              "c:\\Users\\Windows 11\\Documents\\GitHub\\agiles-psico\\Core\\Core.csproj": {
-                "projectPath": "c:\\Users\\Windows 11\\Documents\\GitHub\\agiles-psico\\Core\\Core.csproj"
+              "C:\\Users\\Windows 11\\Documents\\GitHub\\agiles-psico\\Core\\Core.csproj": {
+                "projectPath": "C:\\Users\\Windows 11\\Documents\\GitHub\\agiles-psico\\Core\\Core.csproj"
               }
             }
           }
@@ -67,14 +67,14 @@
         }
       }
     },
-    "c:\\Users\\Windows 11\\Documents\\GitHub\\agiles-psico\\Core\\Core.csproj": {
+    "C:\\Users\\Windows 11\\Documents\\GitHub\\agiles-psico\\Core\\Core.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "c:\\Users\\Windows 11\\Documents\\GitHub\\agiles-psico\\Core\\Core.csproj",
+        "projectUniqueName": "C:\\Users\\Windows 11\\Documents\\GitHub\\agiles-psico\\Core\\Core.csproj",
         "projectName": "Core",
-        "projectPath": "c:\\Users\\Windows 11\\Documents\\GitHub\\agiles-psico\\Core\\Core.csproj",
+        "projectPath": "C:\\Users\\Windows 11\\Documents\\GitHub\\agiles-psico\\Core\\Core.csproj",
         "packagesPath": "C:\\Users\\Windows 11\\.nuget\\packages\\",
-        "outputPath": "c:\\Users\\Windows 11\\Documents\\GitHub\\agiles-psico\\Core\\obj\\",
+        "outputPath": "C:\\Users\\Windows 11\\Documents\\GitHub\\agiles-psico\\Core\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Windows 11\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -126,14 +126,14 @@
         }
       }
     },
-    "c:\\Users\\Windows 11\\Documents\\GitHub\\agiles-psico\\Infrastructure\\Infrastructure.csproj": {
+    "C:\\Users\\Windows 11\\Documents\\GitHub\\agiles-psico\\Infrastructure\\Infrastructure.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "c:\\Users\\Windows 11\\Documents\\GitHub\\agiles-psico\\Infrastructure\\Infrastructure.csproj",
+        "projectUniqueName": "C:\\Users\\Windows 11\\Documents\\GitHub\\agiles-psico\\Infrastructure\\Infrastructure.csproj",
         "projectName": "Infrastructure",
-        "projectPath": "c:\\Users\\Windows 11\\Documents\\GitHub\\agiles-psico\\Infrastructure\\Infrastructure.csproj",
+        "projectPath": "C:\\Users\\Windows 11\\Documents\\GitHub\\agiles-psico\\Infrastructure\\Infrastructure.csproj",
         "packagesPath": "C:\\Users\\Windows 11\\.nuget\\packages\\",
-        "outputPath": "c:\\Users\\Windows 11\\Documents\\GitHub\\agiles-psico\\Infrastructure\\obj\\",
+        "outputPath": "C:\\Users\\Windows 11\\Documents\\GitHub\\agiles-psico\\Infrastructure\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Windows 11\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -151,8 +151,8 @@
               "C:\\Users\\Windows 11\\Documents\\GitHub\\agiles-psico\\Application\\Application.csproj": {
                 "projectPath": "C:\\Users\\Windows 11\\Documents\\GitHub\\agiles-psico\\Application\\Application.csproj"
               },
-              "c:\\Users\\Windows 11\\Documents\\GitHub\\agiles-psico\\Core\\Core.csproj": {
-                "projectPath": "c:\\Users\\Windows 11\\Documents\\GitHub\\agiles-psico\\Core\\Core.csproj"
+              "C:\\Users\\Windows 11\\Documents\\GitHub\\agiles-psico\\Core\\Core.csproj": {
+                "projectPath": "C:\\Users\\Windows 11\\Documents\\GitHub\\agiles-psico\\Core\\Core.csproj"
               }
             }
           }
@@ -227,11 +227,11 @@
               "C:\\Users\\Windows 11\\Documents\\GitHub\\agiles-psico\\Application\\Application.csproj": {
                 "projectPath": "C:\\Users\\Windows 11\\Documents\\GitHub\\agiles-psico\\Application\\Application.csproj"
               },
-              "c:\\Users\\Windows 11\\Documents\\GitHub\\agiles-psico\\Core\\Core.csproj": {
-                "projectPath": "c:\\Users\\Windows 11\\Documents\\GitHub\\agiles-psico\\Core\\Core.csproj"
+              "C:\\Users\\Windows 11\\Documents\\GitHub\\agiles-psico\\Core\\Core.csproj": {
+                "projectPath": "C:\\Users\\Windows 11\\Documents\\GitHub\\agiles-psico\\Core\\Core.csproj"
               },
-              "c:\\Users\\Windows 11\\Documents\\GitHub\\agiles-psico\\Infrastructure\\Infrastructure.csproj": {
-                "projectPath": "c:\\Users\\Windows 11\\Documents\\GitHub\\agiles-psico\\Infrastructure\\Infrastructure.csproj"
+              "C:\\Users\\Windows 11\\Documents\\GitHub\\agiles-psico\\Infrastructure\\Infrastructure.csproj": {
+                "projectPath": "C:\\Users\\Windows 11\\Documents\\GitHub\\agiles-psico\\Infrastructure\\Infrastructure.csproj"
               }
             }
           }
