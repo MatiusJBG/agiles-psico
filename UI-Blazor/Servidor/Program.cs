@@ -29,6 +29,16 @@ builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
         };
     });
 
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy("PermitirCliente", policy =>
+    {
+        policy.WithOrigins("https://localhost:5002") // Puerto del cliente
+              .AllowAnyHeader()
+              .AllowAnyMethod();
+    });
+});
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
@@ -39,6 +49,8 @@ if (app.Environment.IsDevelopment())
 
 app.UseHttpsRedirection();
 
+// El orden es importante para el middleware
+app.UseCors("PermitirCliente");  // CORS debe ir antes de Auth
 app.UseAuthentication();
 app.UseAuthorization();
 

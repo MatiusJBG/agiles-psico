@@ -1,0 +1,21 @@
+@page "/profile"
+@using Microsoft.AspNetCore.Components.Authorization
+@using Microsoft.AspNetCore.Components.Web
+@using Cliente.Shared
+@inject AuthenticationStateProvider AuthenticationStateProvider
+
+<PageTitle>Mi Perfil</PageTitle>
+
+<AuthorizeView>
+    <Authorized>
+        <h1>Mi Perfil</h1>
+        <p>Bienvenido, @context.User.Identity?.Name!</p>
+        <div class="mb-3">
+            <label>Rol:</label>
+            <p>@context.User.Claims.FirstOrDefault(c => c.Type == "role")?.Value</p>
+        </div>
+    </Authorized>
+    <NotAuthorized>
+        <RedirectToLogin />
+    </NotAuthorized>
+</AuthorizeView>

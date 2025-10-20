@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "c:\\Users\\Matius\\Desktop\\Universidad\\METO-AGILES\\agiles-psico\\UI-Blazor\\Cliente\\Cliente.csproj": {}
+    "C:\\Users\\Matius\\Desktop\\Universidad\\METO-AGILES\\agiles-psico\\UI-Blazor\\Cliente\\Cliente.csproj": {}
   },
   "projects": {
-    "c:\\Users\\Matius\\Desktop\\Universidad\\METO-AGILES\\agiles-psico\\UI-Blazor\\Cliente\\Cliente.csproj": {
+    "C:\\Users\\Matius\\Desktop\\Universidad\\METO-AGILES\\agiles-psico\\UI-Blazor\\Cliente\\Cliente.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "c:\\Users\\Matius\\Desktop\\Universidad\\METO-AGILES\\agiles-psico\\UI-Blazor\\Cliente\\Cliente.csproj",
+        "projectUniqueName": "C:\\Users\\Matius\\Desktop\\Universidad\\METO-AGILES\\agiles-psico\\UI-Blazor\\Cliente\\Cliente.csproj",
         "projectName": "Cliente",
-        "projectPath": "c:\\Users\\Matius\\Desktop\\Universidad\\METO-AGILES\\agiles-psico\\UI-Blazor\\Cliente\\Cliente.csproj",
+        "projectPath": "C:\\Users\\Matius\\Desktop\\Universidad\\METO-AGILES\\agiles-psico\\UI-Blazor\\Cliente\\Cliente.csproj",
         "packagesPath": "C:\\Users\\Matius\\.nuget\\packages\\",
-        "outputPath": "c:\\Users\\Matius\\Desktop\\Universidad\\METO-AGILES\\agiles-psico\\UI-Blazor\\Cliente\\obj\\",
+        "outputPath": "C:\\Users\\Matius\\Desktop\\Universidad\\METO-AGILES\\agiles-psico\\UI-Blazor\\Cliente\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Matius\\AppData\\Roaming\\NuGet\\NuGet.Config"

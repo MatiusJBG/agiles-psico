@@ -1,0 +1,16 @@
+@page "/"
+@using Microsoft.AspNetCore.Components.Authorization
+@inject NavigationManager NavigationManager
+
+<AuthorizeView>
+    <Authorized>
+        @{
+            NavigationManager.NavigateTo("/profile");
+        }
+    </Authorized>
+    <NotAuthorized>
+        @{
+            NavigationManager.NavigateTo("/login");
+        }
+    </NotAuthorized>
+</AuthorizeView>

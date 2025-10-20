@@ -126,14 +126,14 @@
         }
       }
     },
-    "c:\\Users\\Matius\\Desktop\\Universidad\\METO-AGILES\\agiles-psico\\Infrastructure\\Infrastructure.csproj": {
+    "C:\\Users\\Matius\\Desktop\\Universidad\\METO-AGILES\\agiles-psico\\Infrastructure\\Infrastructure.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "c:\\Users\\Matius\\Desktop\\Universidad\\METO-AGILES\\agiles-psico\\Infrastructure\\Infrastructure.csproj",
+        "projectUniqueName": "C:\\Users\\Matius\\Desktop\\Universidad\\METO-AGILES\\agiles-psico\\Infrastructure\\Infrastructure.csproj",
         "projectName": "Infrastructure",
-        "projectPath": "c:\\Users\\Matius\\Desktop\\Universidad\\METO-AGILES\\agiles-psico\\Infrastructure\\Infrastructure.csproj",
+        "projectPath": "C:\\Users\\Matius\\Desktop\\Universidad\\METO-AGILES\\agiles-psico\\Infrastructure\\Infrastructure.csproj",
         "packagesPath": "C:\\Users\\Matius\\.nuget\\packages\\",
-        "outputPath": "c:\\Users\\Matius\\Desktop\\Universidad\\METO-AGILES\\agiles-psico\\Infrastructure\\obj\\",
+        "outputPath": "C:\\Users\\Matius\\Desktop\\Universidad\\METO-AGILES\\agiles-psico\\Infrastructure\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Matius\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -230,8 +230,8 @@
               "C:\\Users\\Matius\\Desktop\\Universidad\\METO-AGILES\\agiles-psico\\Core\\Core.csproj": {
                 "projectPath": "C:\\Users\\Matius\\Desktop\\Universidad\\METO-AGILES\\agiles-psico\\Core\\Core.csproj"
               },
-              "c:\\Users\\Matius\\Desktop\\Universidad\\METO-AGILES\\agiles-psico\\Infrastructure\\Infrastructure.csproj": {
-                "projectPath": "c:\\Users\\Matius\\Desktop\\Universidad\\METO-AGILES\\agiles-psico\\Infrastructure\\Infrastructure.csproj"
+              "C:\\Users\\Matius\\Desktop\\Universidad\\METO-AGILES\\agiles-psico\\Infrastructure\\Infrastructure.csproj": {
+                "projectPath": "C:\\Users\\Matius\\Desktop\\Universidad\\METO-AGILES\\agiles-psico\\Infrastructure\\Infrastructure.csproj"
               }
             }
           }

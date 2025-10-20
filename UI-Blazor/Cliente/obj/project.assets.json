@@ -2091,11 +2091,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "c:\\Users\\Matius\\Desktop\\Universidad\\METO-AGILES\\agiles-psico\\UI-Blazor\\Cliente\\Cliente.csproj",
+      "projectUniqueName": "C:\\Users\\Matius\\Desktop\\Universidad\\METO-AGILES\\agiles-psico\\UI-Blazor\\Cliente\\Cliente.csproj",
       "projectName": "Cliente",
-      "projectPath": "c:\\Users\\Matius\\Desktop\\Universidad\\METO-AGILES\\agiles-psico\\UI-Blazor\\Cliente\\Cliente.csproj",
+      "projectPath": "C:\\Users\\Matius\\Desktop\\Universidad\\METO-AGILES\\agiles-psico\\UI-Blazor\\Cliente\\Cliente.csproj",
       "packagesPath": "C:\\Users\\Matius\\.nuget\\packages\\",
-      "outputPath": "c:\\Users\\Matius\\Desktop\\Universidad\\METO-AGILES\\agiles-psico\\UI-Blazor\\Cliente\\obj\\",
+      "outputPath": "C:\\Users\\Matius\\Desktop\\Universidad\\METO-AGILES\\agiles-psico\\UI-Blazor\\Cliente\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Matius\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -2188,5 +2188,13 @@
         "#import": []
       }
     }
-  }
+  },
+  "logs": [
+    {
+      "code": "Undefined",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Problema al leer el archivo de caché C:\\Users\\Matius\\Desktop\\Universidad\\METO-AGILES\\agiles-psico\\UI-Blazor\\Cliente\\obj\\project.nuget.cache : '<' is an invalid start of a property name. Expected a '\"'. Path: $ | LineNumber: 2 | BytePositionInLine: 0."
+    }
+  ]
 }

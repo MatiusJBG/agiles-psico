@@ -1,12 +1,8 @@
 {
   "version": 2,
-<<<<<<< HEAD
   "dgSpecHash": "Dry6adhSL4E=",
-=======
-  "dgSpecHash": "rpghsK8ltQA=",
->>>>>>> 0d85406437969e79c74cfd4a1746aa48c7f8ed01
   "success": true,
-  "projectFilePath": "c:\\Users\\Matius\\Desktop\\Universidad\\METO-AGILES\\agiles-psico\\UI-Blazor\\Cliente\\Cliente.csproj",
+  "projectFilePath": "C:\\Users\\Matius\\Desktop\\Universidad\\METO-AGILES\\agiles-psico\\UI-Blazor\\Cliente\\Cliente.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Matius\\.nuget\\packages\\microsoft.aspnetcore.authorization\\9.0.10\\microsoft.aspnetcore.authorization.9.0.10.nupkg.sha512",
     "C:\\Users\\Matius\\.nuget\\packages\\microsoft.aspnetcore.components\\9.0.10\\microsoft.aspnetcore.components.9.0.10.nupkg.sha512",
@@ -42,5 +38,15 @@
     "C:\\Users\\Matius\\.nuget\\packages\\system.identitymodel.tokens.jwt\\8.14.0\\system.identitymodel.tokens.jwt.8.14.0.nupkg.sha512",
     "C:\\Users\\Matius\\.nuget\\packages\\microsoft.netcore.app.runtime.mono.browser-wasm\\9.0.10\\microsoft.netcore.app.runtime.mono.browser-wasm.9.0.10.nupkg.sha512"
   ],
-  "logs": []
+  "logs": [
+    {
+      "code": "Undefined",
+      "level": "Warning",
+      "message": "Problema al leer el archivo de caché C:\\Users\\Matius\\Desktop\\Universidad\\METO-AGILES\\agiles-psico\\UI-Blazor\\Cliente\\obj\\project.nuget.cache : '<' is an invalid start of a property name. Expected a '\"'. Path: $ | LineNumber: 2 | BytePositionInLine: 0.",
+      "projectPath": "C:\\Users\\Matius\\Desktop\\Universidad\\METO-AGILES\\agiles-psico\\UI-Blazor\\Cliente\\Cliente.csproj",
+      "warningLevel": 1,
+      "filePath": "C:\\Users\\Matius\\Desktop\\Universidad\\METO-AGILES\\agiles-psico\\UI-Blazor\\Cliente\\Cliente.csproj",
+      "targetGraphs": []
+    }
+  ]
 }
