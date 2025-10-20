@@ -1,7 +1,10 @@
 @page "/hotel/{id}"
-@using Cliente.Services
-@inject HotelService HotelService
+@using Application.Interfaces
+@using Core.Entities
+@inject IHotelService HotelService
 @inject NavigationManager NavigationManager
+
+<link href="css/hotel-detail.css" rel="stylesheet" />
 
 @if (hotel != null)
 {
@@ -12,9 +15,17 @@
                     <i class="fas fa-arrow-left"></i>
                 </button>
                 <h1>@hotel.Name</h1>
-                <span class="rating">
-                    <i class="fas fa-star"></i> @hotel.Rating
-                </span>
+                <div class="rating">
+                    @for (int i = 0; i < 4; i++)
+                    {
+                        <i class="fas fa-star @(i < hotel.StarRating ? "star-filled" : "star-empty")"></i>
+                    }
+                    <span class="rating-text">@hotel.StarRating estrellas</span>
+                </div>
+                <div class="hotel-price">
+                    <span class="price-amount">$@hotel.PricePerNight.ToString("N0")</span>
+                    <span class="price-period">/noche</span>
+                </div>
             </div>
 
             <div id="hotel-carousel" class="carousel slide" data-bs-ride="carousel">

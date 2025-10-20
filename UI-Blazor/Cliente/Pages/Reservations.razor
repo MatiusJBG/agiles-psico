@@ -1,0 +1,158 @@
+@page "/reservations"
+@using Microsoft.AspNetCore.Components.Authorization
+@using Application.Interfaces
+@using Core.Entities
+
+@attribute [Authorize]
+
+@inject IReservationService ReservationService
+
+<link href="css/reservations.css" rel="stylesheet" />
+
+<PageTitle>Mis Reservaciones</PageTitle>
+
+<div class="container mt-4">
+    <h1 class="page-title">Mis Reservaciones</h1>
+    <p class="page-subtitle">Aquí puedes ver y gestionar todas tus reservaciones.</p>
+    
+    @if (showDeleteCancelled && reservations.Any(r => r.Status == "Cancelada"))
+    {
+        <div class="mb-3">
+            <button class="btn btn-outline-danger btn-sm" @onclick="DeleteCancelledReservations">
+                <i class="fas fa-trash"></i> Eliminar canceladas
+            </button>
+        </div>
+    }
+    
+    @if (reservations.Any())
+    {
+        <div class="row mt-4">
+            @foreach (var reservation in reservations)
+            {
+                <div class="col-md-6 col-lg-4 mb-4">
+                    <div class="card h-100 reservation-card">
+                        <div class="card-body">
+                            <h5 class="card-title">@reservation.HotelName</h5>
+                            <div class="reservation-details">
+                                <p><strong>Check-in:</strong> @reservation.CheckInDate.ToString("dd/MM/yyyy")</p>
+                                <p><strong>Check-out:</strong> @reservation.CheckOutDate.ToString("dd/MM/yyyy")</p>
+                                <p><strong>Huéspedes:</strong> @reservation.GuestCount</p>
+                                <p><strong>Total:</strong> <span class="price">$@reservation.TotalPrice.ToString("N2")</span></p>
+                                <p><strong>Estado:</strong> 
+                                    <span class="status-badge @GetStatusClass(reservation.Status)">@reservation.Status</span>
+                                </p>
+                            </div>
+                            <div class="reservation-actions">
+                                <button class="btn btn-outline-primary btn-sm" @onclick="() => ViewReservation(reservation.Id)">
+                                    <i class="fas fa-eye"></i> Ver Detalles
+                                </button>
+                                @if (reservation.Status == "Confirmada")
+                                {
+                                    <button class="btn btn-outline-danger btn-sm" @onclick="() => CancelReservation(reservation.Id)">
+                                        <i class="fas fa-times"></i> Cancelar
+                                    </button>
+                                }
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            }
+        </div>
+    }
+    else
+    {
+        <div class="empty-state">
+            <div class="empty-icon">
+                <i class="fas fa-calendar-times"></i>
+            </div>
+            <h3>No tienes reservaciones</h3>
+            <p>Cuando hagas una reservación, aparecerá aquí.</p>
+            <a href="/hotels" class="btn btn-primary">
+                <i class="fas fa-hotel"></i> Ver Hoteles
+            </a>
+        </div>
+    }
+</div>
+
+@code {
+    private List<Reservation> reservations = new List<Reservation>();
+    private bool showDeleteCancelled = true;
+
+    protected override void OnInitialized()
+    {
+        // Obtener reservaciones del usuario actual
+        reservations = ReservationService.GetUserReservations("current-user");
+        
+        // Si no hay reservaciones, agregar algunas de ejemplo
+        if (!reservations.Any())
+        {
+            var exampleReservations = new List<Reservation>
+            {
+                new Reservation
+                {
+                    Id = "res-001",
+                    UserId = "current-user",
+                    HotelName = "Hotel Ambato",
+                    CheckInDate = DateTime.Now.AddDays(7),
+                    CheckOutDate = DateTime.Now.AddDays(10),
+                    GuestCount = 2,
+                    TotalPrice = 255.00m,
+                    Status = "Confirmada"
+                },
+                new Reservation
+                {
+                    Id = "res-002",
+                    UserId = "current-user",
+                    HotelName = "Roka Plaza Hotel Boutique",
+                    CheckInDate = DateTime.Now.AddDays(15),
+                    CheckOutDate = DateTime.Now.AddDays(18),
+                    GuestCount = 1,
+                    TotalPrice = 360.00m,
+                    Status = "Pendiente"
+                }
+            };
+            
+            foreach (var reservation in exampleReservations)
+            {
+                ReservationService.AddReservation(reservation);
+            }
+            
+            reservations = ReservationService.GetUserReservations("current-user");
+        }
+    }
+
+    private string GetStatusClass(string status)
+    {
+        return status switch
+        {
+            "Confirmada" => "status-confirmed",
+            "Pendiente" => "status-pending",
+            "Cancelada" => "status-cancelled",
+            _ => "status-default"
+        };
+    }
+
+    private void ViewReservation(string reservationId)
+    {
+        // Implementar vista de detalles de reservación
+    }
+
+    private void CancelReservation(string reservationId)
+    {
+        if (ReservationService.CancelReservation(reservationId))
+        {
+            // Actualizar la lista de reservaciones
+            reservations = ReservationService.GetUserReservations("current-user");
+            StateHasChanged();
+        }
+    }
+
+    private void DeleteCancelledReservations()
+    {
+        var deleted = ReservationService.DeleteCancelledForUser("current-user");
+        if (deleted == 0) return;
+        reservations = ReservationService.GetUserReservations("current-user");
+        StateHasChanged();
+    }
+
+}

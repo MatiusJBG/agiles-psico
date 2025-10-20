@@ -28,10 +28,6 @@ build_property.EnableCodeStyleSeverity =
 build_metadata.AdditionalFiles.TargetPath = QXBwLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Matius/Desktop/Universidad/METO-AGILES/agiles-psico/UI-Blazor/Cliente/Pages/Index.razor]
-build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSW5kZXgucmF6b3I=
-build_metadata.AdditionalFiles.CssScope = 
-
 [C:/Users/Matius/Desktop/Universidad/METO-AGILES/agiles-psico/UI-Blazor/Cliente/Pages/Login.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTG9naW4ucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
@@ -71,3 +67,11 @@ build_metadata.AdditionalFiles.CssScope = b-ux0a5cs4f2
 [C:/Users/Matius/Desktop/Universidad/METO-AGILES/agiles-psico/UI-Blazor/Cliente/Pages/Hotels.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSG90ZWxzLnJhem9y
 build_metadata.AdditionalFiles.CssScope = b-5fxv8tlhox
+
+[C:/Users/Matius/Desktop/Universidad/METO-AGILES/agiles-psico/UI-Blazor/Cliente/Pages/Index.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSW5kZXgucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = b-xm93f01lw4
+
+[C:/Users/Matius/Desktop/Universidad/METO-AGILES/agiles-psico/UI-Blazor/Cliente/Pages/Reservations.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUmVzZXJ2YXRpb25zLnJhem9y
+build_metadata.AdditionalFiles.CssScope = b-ntsadvx2hd

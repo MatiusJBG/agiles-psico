@@ -5,6 +5,8 @@ using Cliente;
 using Cliente.Services;
 using Cliente.Auth;
 using Microsoft.AspNetCore.Components;
+using Application.Interfaces;
+using Infrastructure.Services;
 
 var builder = WebAssemblyHostBuilder.CreateDefault(args);
 builder.RootComponents.Add<App>("#app");
@@ -18,6 +20,9 @@ builder.Services.AddAuthorizationCore();
 builder.Services.AddScoped<AuthenticationStateProvider, CustomAuthenticationStateProvider>();
 builder.Services.AddScoped<AuthService>();
 builder.Services.AddScoped(sp => new HttpClient { BaseAddress = new Uri("http://localhost:5108") });
-builder.Services.AddScoped<HotelService>();
+
+// Registrar servicios de la arquitectura onion
+builder.Services.AddScoped<IHotelService, HotelService>();
+builder.Services.AddScoped<IReservationService, ReservationService>();
 
 await builder.Build().RunAsync();
