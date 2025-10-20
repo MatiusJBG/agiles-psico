@@ -16,16 +16,22 @@ namespace Servidor.Controllers
             _authService = authService;
         }
 
+        // Método auxiliar para pruebas
+        [HttpGet("test")]
+        public IActionResult Test()
+        {
+            return Ok(new { message = "El controlador está funcionando correctamente" });
+        }
+
         [HttpPost("login")]
         public IActionResult Login([FromBody] LoginRequest request)
         {
-            var response = _authService.Login(request);
-
-            if (response == null)
+            if (string.IsNullOrWhiteSpace(request.Username))
             {
-                return Unauthorized();
+                return BadRequest(new { message = "El nombre de usuario es requerido" });
             }
 
+            var response = _authService.Login(request);
             return Ok(response);
         }
     }

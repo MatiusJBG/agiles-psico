@@ -12,10 +12,10 @@ builder.RootComponents.Add<HeadOutlet>("head::after");
 // Ensure the BaseAddress has a trailing slash to avoid path concatenation issues
 var baseAddr = builder.HostEnvironment.BaseAddress;
 if (!baseAddr.EndsWith('/')) baseAddr += '/';
-builder.Services.AddScoped(sp => new HttpClient { BaseAddress = new Uri(baseAddr) });
 
 builder.Services.AddAuthorizationCore();
 builder.Services.AddScoped<AuthenticationStateProvider, CustomAuthenticationStateProvider>();
 builder.Services.AddScoped<AuthService>();
+builder.Services.AddScoped(sp => new HttpClient { BaseAddress = new Uri("http://localhost:5108") });
 
 await builder.Build().RunAsync();

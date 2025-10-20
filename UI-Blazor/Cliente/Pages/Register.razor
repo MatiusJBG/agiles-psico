@@ -1,0 +1,89 @@
+@page "/register"
+@layout EmptyLayout
+@using Cliente.Models
+@using Cliente.Services
+@inject AuthService AuthService
+@inject NavigationManager NavigationManager
+
+<div class="login-container">
+    <div class="login-box">
+        <div class="text-center mb-4">
+            <h2>Registro de Usuario</h2>
+            <p>Crea una cuenta para continuar</p>
+        </div>
+        <div class="mb-3">
+            <label>Nombre de usuario</label>
+            <input @bind="registerRequest.Username" class="form-control" placeholder="Elige un nombre de usuario" />
+        </div>
+        <div class="mb-3">
+            <label>Contraseña</label>
+            <input @bind="registerRequest.Password" type="password" class="form-control" placeholder="Elige una contraseña" />
+        </div>
+        <div class="mb-3">
+            <label>Confirmar Contraseña</label>
+            <input @bind="registerRequest.ConfirmPassword" type="password" class="form-control" placeholder="Confirma tu contraseña" />
+        </div>
+        <div class="mb-3 d-grid gap-2">
+            <button @onclick="HandleRegister" class="btn btn-primary">Registrarse</button>
+        </div>
+        <div class="text-center">
+            <a href="login">¿Ya tienes cuenta? Inicia sesión</a>
+        </div>
+        @if (!string.IsNullOrEmpty(errorMessage))
+        {
+            <div class="alert alert-danger mt-3">
+                @errorMessage
+            </div>
+        }
+    </div>
+</div>
+
+<style>
+    .login-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        background-color: #f8f9fa;
+    }
+
+    .login-box {
+        width: 100%;
+        max-width: 400px;
+        padding: 2rem;
+        background: white;
+        border-radius: 8px;
+        box-shadow: 0 0 20px rgba(0,0,0,0.1);
+    }
+</style>
+
+@code {
+    private RegisterRequest registerRequest = new RegisterRequest();
+    private string errorMessage = string.Empty;
+
+    private async Task HandleRegister()
+    {
+        if (registerRequest.Password != registerRequest.ConfirmPassword)
+        {
+            errorMessage = "Las contraseñas no coinciden";
+            return;
+        }
+
+        try
+        {
+            var result = await AuthService.Register(registerRequest);
+            if (result)
+            {
+                NavigationManager.NavigateTo("/login");
+            }
+            else
+            {
+                errorMessage = "No se pudo registrar el usuario";
+            }
+        }
+        catch
+        {
+            errorMessage = "Error al intentar registrar el usuario";
+        }
+    }
+}

@@ -14,12 +14,7 @@ namespace Infrastructure.Services
 {
     public class InMemoryAuthService : IAuthService
     {
-        private readonly List<User> _users = new List<User>
-        {
-            new User { Username = "admin", Password = "admin", Role = "Admin" },
-            new User { Username = "cliente", Password = "cliente", Role = "Client" }
-        };
-
+        private static readonly List<User> _users = new();
         private readonly IConfiguration _configuration;
 
         public InMemoryAuthService(IConfiguration configuration)
@@ -29,15 +24,15 @@ namespace Infrastructure.Services
 
         public LoginResponse Login(LoginRequest request)
         {
-            var user = _users.SingleOrDefault(u => u.Username == request.Username && u.Password == request.Password);
-
-            if (user == null)
-            {
-                return null;
-            }
+            // Crear un usuario temporal con el nombre proporcionado
+            var user = new User 
+            { 
+                Username = request.Username, 
+                Password = "not-required",  // No se requiere contraseña
+                Role = "Client"  // Todos son clientes
+            };
 
             var token = GenerateJwtToken(user);
-
             return new LoginResponse { Token = token, Role = user.Role };
         }
 

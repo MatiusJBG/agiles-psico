@@ -23,5 +23,11 @@ namespace Cliente.Services
             }
             return null;
         }
+
+        public async Task<bool> Register(RegisterRequest request)
+        {
+            var response = await _httpClient.PostAsJsonAsync("api/auth/register", request);
+            return response.IsSuccessStatusCode;
+        }
     }
 }

@@ -1,47 +1,118 @@
-@page "/login"
+﻿@page "/login"
+@layout EmptyLayout
 @using Cliente.Models
 @using Cliente.Services
 @using Cliente.Auth
 @using Microsoft.AspNetCore.Components.Authorization
+@using System.Threading.Tasks
+
 @inject AuthService AuthService
 @inject NavigationManager NavigationManager
 @inject AuthenticationStateProvider AuthenticationStateProvider
 
-<div class="row">
-    <div class="col-lg-4 offset-lg-4 pt-4 pb-4 border">
-        <div class="mb-3 text-center">
-            <h3>LOGIN</h3>
-        </div>
-        <div class="mb-3">
-            <label>Username</label>
-            <input @bind="loginRequest.Username" class="form-control" placeholder="Username" />
-        </div>
-        <div class="mb-3">
-            <label>Password</label>
-            <input @bind="loginRequest.Password" type="password" class="form-control" placeholder="Password" />
-        </div>
-        <div class="mb-3 d-grid gap-2">
-            <button @onclick="HandleLogin" class="btn btn-primary">Login</button>
+<div class="login-page">
+    <div class="login-container @(isLoading ? "loading" : "")">
+        <div class="login-box @(showForm ? "show" : "")">
+            <div class="logo-container">
+                <i class="fas fa-hotel hotel-icon"></i>
+            </div>
+            <h2 class="welcome-text">¡Bienvenido!</h2>
+            <p class="subtitle">Ingresa tu nombre para continuar</p>
+            
+            <div class="form-group">
+                <div class="input-group">
+                    <i class="fas fa-user input-icon"></i>
+                    <input @bind="loginRequest.Username" 
+                           @bind:event="oninput"
+                           class="modern-input" 
+                           placeholder="Tu nombre"
+                           @onkeypress="HandleKeyPress" />
+                </div>
+                <div class="input-border"></div>
+            </div>
+
+            <button @onclick="HandleLogin" 
+                    class="login-button @(isLoading ? "loading" : "")"
+                    disabled="@isLoading">
+                @if (isLoading)
+                {
+                    <div class="spinner"></div>
+                    <span>Ingresando...</span>
+                }
+                else
+                {
+                    <span>Ingresar</span>
+                    <i class="fas fa-arrow-right"></i>
+                }
+            </button>
+
+            @if (!string.IsNullOrEmpty(errorMessage))
+            {
+                <div class="error-message">
+                    <i class="fas fa-exclamation-circle"></i>
+                    @errorMessage
+                </div>
+            }
         </div>
     </div>
 </div>
 
 @code {
     private LoginRequest loginRequest = new LoginRequest();
-    private string errorMessage = string.Empty;
+    private string errorMessage = "";
+    private bool isLoading = false;
+    private bool showForm = true;
+
+    protected override void OnInitialized()
+    {
+        showForm = true;
+    }
 
     private async Task HandleLogin()
     {
-        var result = await AuthService.Login(loginRequest);
-        if (result != null)
+        if (string.IsNullOrWhiteSpace(loginRequest.Username))
         {
-            var customAuthStateProvider = (CustomAuthenticationStateProvider)AuthenticationStateProvider;
-            await customAuthStateProvider.UpdateAuthenticationState(result.Token);
-            NavigationManager.NavigateTo("/");
+            errorMessage = "Por favor ingresa tu nombre";
+            return;
         }
-        else
+
+        try
         {
-            errorMessage = "Invalid username or password";
+            isLoading = true;
+            errorMessage = "";
+            StateHasChanged();
+
+            var response = await AuthService.Login(loginRequest);
+            
+            if (response != null && response.Token != null)
+            {
+                await ((CustomAuthenticationStateProvider)AuthenticationStateProvider)
+                    .UpdateAuthenticationState(response.Token);
+                
+                await Task.Delay(1000);
+                NavigationManager.NavigateTo("/");
+            }
+            else
+            {
+                errorMessage = "No se pudo iniciar sesión";
+            }
+        }
+        catch (Exception ex)
+        {
+            errorMessage = "Error al iniciar sesión: " + ex.Message;
+        }
+        finally
+        {
+            isLoading = false;
+            StateHasChanged();
+        }
+    }
+
+    private async Task HandleKeyPress(KeyboardEventArgs e)
+    {
+        if (e.Key == "Enter")
+        {
+            await HandleLogin();
         }
     }
 }

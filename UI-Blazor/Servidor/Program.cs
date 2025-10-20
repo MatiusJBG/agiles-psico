@@ -33,7 +33,7 @@ builder.Services.AddCors(options =>
 {
     options.AddPolicy("PermitirCliente", policy =>
     {
-        policy.WithOrigins("https://localhost:5002") // Puerto del cliente
+        policy.WithOrigins("http://localhost:5246") // Puerto del cliente
               .AllowAnyHeader()
               .AllowAnyMethod();
     });
